@@ -1,0 +1,21 @@
+public class TurlteDropTest
+{
+  public static void main(String[] args)
+  {
+    FileChooser.setMediaPath("../mediasources/");
+    World world = new World();
+    Turtle turtle = new Turtle(world);
+    String fileName = "C:\\Users\\Robert\\Google Drive\\2015-16\\apcs\\general\\resources\\bookClasses-3-9-10\\mediasources\\flower1.jpg ";
+    //Picture p = new Picture(fileName);
+    fileName=FileChooser.getMediaPath("flower1.jpg");
+    System.out.println(fileName);
+    Picture p = 
+      new Picture(FileChooser.getMediaPath("flower1.jpg"));
+    turtle.penUp();
+    for (int i = 45; i < 360; i=i+45)
+    {
+      turtle.drop(p);
+      turtle.turn(i);
+    }
+  }
+}
