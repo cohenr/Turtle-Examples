@@ -1,10 +1,17 @@
+import java.awt.Color;
+
 public class TurlteDropTest
 {
   public static void main(String[] args)
   {
     FileChooser.setMediaPath("mediasources/");
-    World world = new World();
+    World world = new World(1000,1000);
+    Picture back = new Picture(1000,1000);
+    back.setAllPixelsToAColor(Color.GREEN);
+    world.setPicture(back);
     Turtle turtle = new Turtle(world);
+    turtle.setColor(new Color(255, 0, 255));
+    turtle.setPenWidth(2);
     Picture p = 
       new Picture(FileChooser.getMediaPath("chisum.jpg"));
     p=p.scale(.5,.5);
