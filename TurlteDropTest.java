@@ -5,8 +5,8 @@ public class TurlteDropTest
   public static void main(String[] args)
   {
     FileChooser.setMediaPath("mediasources/");
-    World world = new World(1000,1000);
-    Picture back = new Picture(1000,1000);
+    World world = new World(800,800);
+    Picture back = new Picture(800,800);
     back.setAllPixelsToAColor(Color.GREEN);
     world.setPicture(back);
     Turtle turtle = new Turtle(world);
